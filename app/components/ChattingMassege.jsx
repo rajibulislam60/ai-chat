@@ -1,18 +1,14 @@
-import React from "react";
+"use client";
 
-export default function ChattingMassege({ message, isAIReply }) {
+export default function ChattingMessage({ message, isAIReply }) {
   return (
-    <div>
+    <div className={`flex ${isAIReply ? "justify-start" : "justify-end"} mb-4`}>
       <div
-        className={`flex ${isAIReply ? "justify-start" : "justify-end"} my-2`}
+        className={`p-3 rounded-lg max-w-xs ${
+          isAIReply ? "bg-gray-200 text-black" : "bg-blue-500 text-white"
+        }`}
       >
-        <div
-          className={`${
-            isAIReply ? "bg-gray-200 text-black" : "bg-teal-500 text-white"
-          } p-3 rounded-lg max-w-md`}
-        >
-          {message}
-        </div>
+        {message}
       </div>
     </div>
   );

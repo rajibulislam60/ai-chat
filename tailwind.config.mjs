@@ -13,5 +13,15 @@ export default {
       },
     },
   },
+  container: {
+    center: true, // Automatically center the container
+    padding: "1rem", // Default padding on all sides
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1120px", // Use your custom width for large screens
+      xl: "1280px",
+    },
+  },
   plugins: [],
 };
